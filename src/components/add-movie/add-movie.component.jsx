@@ -49,7 +49,7 @@ class AddMovie extends Component {
                         placeholder='Add Movie'
                         onChange={this.updateMovie}
                     />
-                    <button type="submit" className="add-movie-button">Add Movie</button>
+                    <button type="submit" className="add-movie-button">Search Movie</button>
                 </form>
                 {this.state.display && this.state.relatedMovies !== null && (
                     <MovieList movies={this.state.relatedMovies} hideList={this.hideList} />

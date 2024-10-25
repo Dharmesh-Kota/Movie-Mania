@@ -20,8 +20,12 @@ class Card extends Component {
         return (
             <>
                 <div className='card-container' onClick={this.handleOpen}>
-                    <img alt='movie' src={`https://image.tmdb.org/t/p/${windowWidth < 768 ? 'w200' : 'w300'}/${this.props.movie.poster_path}`} />
-                    <h1>{this.props.movie.title}</h1>
+                <img 
+                    alt="movie" 
+                    src={`https://image.tmdb.org/t/p/${windowWidth < 480 ? 'w200' : 'w300'}/${this.props.movie.poster_path}`} 
+                    style={{ borderRadius: '5px', maxWidth: '100%', height: 'auto' }}
+                />
+                <h1>{this.props.movie.title}</h1>
                 </div>
                 <InfoModal movie={this.props.movie} open={this.state.open} handleClose={this.handleClose} />
             </>

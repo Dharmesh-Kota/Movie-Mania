@@ -1,26 +1,26 @@
 .add-movie-modal {
-    padding: 20px;
+    padding: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 90%;
+    width: 100%;
     max-width: 500px;
     margin: auto;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 @media (max-width: 768px) {
     .add-movie-modal {
-        padding: 16px;
-        max-width: 400px;
+        max-width: 90%;
     }
 }
 
 @media (max-width: 480px) {
     .add-movie-modal {
-        padding: 12px;
         max-width: 100%;
     }
 }
@@ -28,14 +28,14 @@
 .add-movie-form {
     display: flex;
     width: 100%;
-    max-width: 400px;
     gap: 8px;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
 }
 
 @media (max-width: 480px) {
     .add-movie-form {
         flex-direction: column;
-        gap: 6px;
     }
 }
 
@@ -46,17 +46,12 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     outline: none;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .search-movie:focus {
     border-color: #1976d2;
-}
-
-@media (max-width: 480px) {
-    .search-movie {
-        font-size: 14px;
-        padding: 8px;
-    }
 }
 
 .add-movie-button {
@@ -68,15 +63,17 @@
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    box-sizing: border-box;
 }
 
 .add-movie-button:hover {
     background-color: #1565c0;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .add-movie-button {
         font-size: 14px;
         padding: 8px 12px;
+        width: 100%;
     }
 }
