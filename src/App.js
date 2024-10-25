@@ -53,6 +53,10 @@ class App extends Component {
   };
 
   updateMovies = (movie) => {
+    if (!movie) {
+      this.setState({ openAddModal: false });
+      return;
+    }
     const movieExists = this.state.movies.some(
       (existingMovie) => existingMovie.id === movie.id
     );

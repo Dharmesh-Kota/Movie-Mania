@@ -60,7 +60,7 @@ class AddMovieModal extends Component {
             aria-describedby="modal-modal-description"
             >
             <Box sx={addMovieStyle}>
-                <AddMovie updateMovies={this.props.updateMovies} />
+                <AddMovie updateMovies={this.props.updateMovies} closeModal={this.handleAddModalClose} />
             </Box>
             </Modal>
             </div>

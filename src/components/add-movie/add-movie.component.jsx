@@ -17,6 +17,7 @@ class AddMovie extends Component {
     showList = () => (this.setState({display: true}))
     hideList = (movie) => {
         this.setState({display: false});
+        this.props.closeModal();
         this.props.updateMovies(movie);
     }
 
@@ -50,7 +51,7 @@ class AddMovie extends Component {
                     />
                     <button type="submit" className="add-movie-button">Add Movie</button>
                 </form>
-                {this.state.display && (
+                {this.state.display && this.state.relatedMovies !== null && (
                     <MovieList movies={this.state.relatedMovies} hideList={this.hideList} />
                 )}
             </div>
