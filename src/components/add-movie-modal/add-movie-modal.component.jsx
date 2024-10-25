@@ -3,16 +3,24 @@ import { Button, Modal, Box } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import AddMovie from "../add-movie/add-movie.component.jsx";
 
+const getAddMovieWidth = () => {
+    return window.innerWidth < 768 ? '90vw' : 400; // Use 90% of viewport width on mobile
+};
+
 const addMovieStyle = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: getAddMovieWidth(),
+    maxWidth: '90vw', 
+    maxHeight: '80vh', 
+    overflowY: 'auto', 
+    bgcolor: "background.paper",
+    border: "2px solid #000",
+    boxShadow: 24,
+    p: 4,
+    boxSizing: 'border-box', 
 };
 
 class AddMovieModal extends Component {

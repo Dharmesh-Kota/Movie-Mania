@@ -7,7 +7,23 @@ body {
 }
 
 .title {
-  font-family: 'Rubik Wet Paint';
+  font-family: 'Rubik Wet Paint', cursive;
   font-size: 3rem;
   color: #0ccac4;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem; 
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 20px 0;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
 }

@@ -1,9 +1,8 @@
-/* Styling for the main search input */
 .search {
   width: 100%;
   max-width: 400px;
   padding: 10px 15px;
-  margin: 1rem;
+  margin: 1rem auto;
   font-size: 16px;
   color: #333;
   background-color: #f9f9f9;
@@ -14,14 +13,28 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Add a subtle focus effect */
 .search:focus {
   border-color: #1976d2;
   background-color: #fff;
   box-shadow: 0 2px 6px rgba(25, 118, 210, 0.3);
 }
 
-/* Placeholder styling */
 .search::placeholder {
   color: #888;
+}
+
+@media (max-width: 768px) {
+  .search {
+    max-width: 300px; 
+    font-size: 14px; 
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search {
+    max-width: 90%; 
+    font-size: 14px;
+    padding: 8px 10px;
+  }
 }
